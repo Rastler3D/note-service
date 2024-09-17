@@ -1,0 +1,67 @@
+{
+  "info": {
+    "name": "Note Service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Note",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token1",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"My First Note\",\n    \"content\": \"This is the content of my first note.\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/notes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "notes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Notes",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token1",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/notes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "notes"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
